@@ -1,0 +1,4 @@
+prompt_type,sum,count,win_rate
+basic,2,6,0.333
+structured,2,6,0.333
+thermal_aware,2,6,0.333

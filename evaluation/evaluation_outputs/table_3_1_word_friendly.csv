@@ -1,0 +1,7 @@
+prompt_type,pipeline,precision,recall,f1
+Basic,Baseline,0.018,0.605,0.035
+Basic,TADN,0.016,0.49,0.03
+Structured,Baseline,0.023,0.581,0.044
+Structured,TADN,0.018,0.46,0.034
+Thermal-aware,Baseline,0.018,0.253,0.032
+Thermal-aware,TADN,0.019,0.391,0.036

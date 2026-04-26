@@ -52,6 +52,3 @@ Thermal images were sourced from the FLIR dataset, a publicly available collecti
 ## Author
 Maryam Yasser Ellathy
 University of Leeds - School of Computing
-
-Maryam Yasser Ellathy
-University of Leeds — School of Computing

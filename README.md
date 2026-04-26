@@ -3,7 +3,6 @@
 This repository contains the full implementation for the dissertation:
 
 **"Thermal-to-RGB Scene Reconstruction Using Depth-Aware ControlNet"**
-Maryam Yasser Ellathy , University of Leeds, COMP3931 Individual Project, 2025/2026
 
 ## Project Overview
 

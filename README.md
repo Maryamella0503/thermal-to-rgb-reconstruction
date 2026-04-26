@@ -9,13 +9,35 @@ This repository contains the full implementation for the dissertation:
 This project investigates whether structural consistency in thermal-to-RGB image reconstruction can be improved through conditioning-level refinement, without retraining large-scale diffusion models. A Thermal-Aware Depth Normalisation Adapter (TADN) is proposed and evaluated within a Stable Diffusion 1.5 and ControlNet framework.
 
 ## Repository Structure
-1. baseline/  --> Baseline pipeline (SD1.5 + ControlNet depth)
-2. tadn/     --> TADN preprocessing module
-3. evaluation/  --> Edge-based precision, recall, F1 scripts
-4. outputs/     --> Generated RGB outputs (baseline and TADN)
-5. results/     --> CSV files containing quantitative evaluation results
-6. notebooks/   --> Jupyter notebooks used for experiments
-7. requirements.txt  --> Python dependencies
+
+1. Thermal_Depth_Sandbox/  
+   → Main experimental pipeline (depth generation, baseline outputs, TADN outputs)  
+   → Includes:
+      - 01_input_thermal/
+      - 01_depth_outputs/
+      - 02_outputs_baseline/
+      - 03_outputs_tadn/
+      - notebooks for each stage of the pipeline
+
+2. evaluation/  
+   → Edge-based evaluation scripts and outputs  
+   → Includes:
+      - evaluation_outputs/
+      - edge_debug_evaluation/
+      - qualitative.ipynb
+      - table_3_1.csv
+
+3. figures/  
+   → Figures used in the dissertation
+
+4. OLD_* folders  
+   → Previous experimental attempts (not used in final evaluation, retained for completeness)
+
+5. README.md  
+   → Project overview and instructions
+
+6. requirements.txt  
+   → Python dependencies required to run the project
 
 ## Method Summary
 

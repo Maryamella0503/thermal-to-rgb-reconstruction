@@ -10,13 +10,13 @@ Maryam Yasser Ellathy , University of Leeds, COMP3931 Individual Project, 2025/2
 This project investigates whether structural consistency in thermal-to-RGB image reconstruction can be improved through conditioning-level refinement, without retraining large-scale diffusion models. A Thermal-Aware Depth Normalisation Adapter (TADN) is proposed and evaluated within a Stable Diffusion 1.5 and ControlNet framework.
 
 ## Repository Structure
-1. baseline/          # Baseline pipeline (SD1.5 + ControlNet depth)
-2. tadn/              # TADN preprocessing module
-3. evaluation/        # Edge-based precision, recall, F1 scripts
-4. outputs/           # Generated RGB outputs (baseline and TADN)
-5. results/           # CSV files containing quantitative evaluation results
-6. notebooks/         # Jupyter notebooks used for experiments
-7. requirements.txt   # Python dependencies
+1. baseline/  --> Baseline pipeline (SD1.5 + ControlNet depth)
+2. tadn/     --> TADN preprocessing module
+3. evaluation/  --> Edge-based precision, recall, F1 scripts
+4. outputs/     --> Generated RGB outputs (baseline and TADN)
+5. results/     --> CSV files containing quantitative evaluation results
+6. notebooks/   --> Jupyter notebooks used for experiments
+7. requirements.txt  --> Python dependencies
 
 ## Method Summary
 

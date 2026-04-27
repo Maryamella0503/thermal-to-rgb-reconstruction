@@ -6,7 +6,7 @@ This repository contains the full implementation for the dissertation:
 
 ## Project Overview
 
-This project investigates whether structural consistency in thermal-to-RGB image reconstruction can be improved through conditioning-level refinement, without retraining large-scale diffusion models. A Thermal-Aware Depth Normalisation Adapter (TADN) is proposed and evaluated within a Stable Diffusion 1.5 and ControlNet framework.
+This project investigates whether structural consistency in thermal-to-RGB image reconstruction can be improved through conditioning-level refinement, without retraining large-scale diffusion models. A Thermal-Aware Depth Normalisation Adapter (TADN) is proposed and evaluated within a Stable Diffusion 1.5 and ControlNet framework. The focus of this work is on improving structural consistency rather than photorealistic accuracy in cross-modal reconstruction.
 
 ## Setup Instructions
 
@@ -39,6 +39,7 @@ jupyter notebook
 3. Stage_3 → TADN pipeline
 4. evaluation → metrics and qualitative analysis
 
+Note: Running the full pipeline requires downloading pretrained models and may take significant time depending on hardware. GPU acceleration is recommended.
 
 ## Repository Structure
 
@@ -71,7 +72,7 @@ Main experimental pipeline, organised into three stages:
 
 ### 2. evaluation/
 → Quantitative and qualitative evaluation
-
+Evaluation outputs include edge-based precision, recall, and F1 scores used in the dissertation.
 - `evaluation_outputs/`
 - `edge_debug_evaluation/`
 - `qualitative.ipynb`
@@ -110,15 +111,7 @@ The pipeline takes a thermal image as input and generates a structurally plausib
 
 ## Reproducibility
 
-All experiments were conducted under fixed random seeds and identical generation parameters across baseline and TADN configurations. Results are logged in structured CSV format and can be reproduced by running the notebooks in order.
-
-## Requirements
-
-Install dependencies with:
-
-pip install -r requirements.txt
-
-Key dependencies: PyTorch, Hugging Face Diffusers, ControlNet, OpenCV, NumPy, Matplotlib, Pandas
+All experiments were conducted under fixed random seeds and identical generation parameters across baseline and TADN configurations. Results are logged in structured CSV format and can be reproduced by running the notebooks in order. No model weights were modified during experimentation.
 
 ## Models Used
 
@@ -130,6 +123,10 @@ All models are loaded via Hugging Face Diffusers and used in inference-only mode
 ## Dataset
 
 Thermal images were sourced from the FLIR dataset, a publicly available collection of forward-facing automotive thermal imagery. Nine images were selected for controlled evaluation.
+
+## Disclaimer
+
+This repository is provided for academic assessment purposes. Generated RGB outputs are model-based reconstructions and should not be interpreted as ground-truth representations.
 
 ## Author
 Maryam Yasser Ellathy

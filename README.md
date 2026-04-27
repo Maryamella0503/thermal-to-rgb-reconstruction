@@ -92,6 +92,8 @@ Main experimental pipeline, organised into three stages:
 ### 5. README.md
 → Project overview and instructions
 
+---
+
 ## Notes
 - This project uses pretrained Stable Diffusion and ControlNet models.
 - GPU acceleration is recommended for faster inference.

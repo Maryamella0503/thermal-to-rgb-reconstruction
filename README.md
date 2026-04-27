@@ -8,36 +8,94 @@ This repository contains the full implementation for the dissertation:
 
 This project investigates whether structural consistency in thermal-to-RGB image reconstruction can be improved through conditioning-level refinement, without retraining large-scale diffusion models. A Thermal-Aware Depth Normalisation Adapter (TADN) is proposed and evaluated within a Stable Diffusion 1.5 and ControlNet framework.
 
+## Setup Instructions
+
+To run this project locally:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Maryamella0503/thermal-to-rgb-reconstruction.git
+cd thermal-to-rgb-reconstruction
+```
+### 2. Create a virtual environment (recommended)
+```bash
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+```
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+### 4. Run notebooks
+Open the notebooks using Jupyter:
+```bash
+jupyter notebook
+```
+
+### Run in order:
+1. Stage_1 → thermal to depth
+2. Stage_2 → baseline pipeline
+3. Stage_3 → TADN pipeline
+4. evaluation → metrics and qualitative analysis
+
+
 ## Repository Structure
 
-1. Thermal_Depth_Sandbox/  
-   → Main experimental pipeline (depth generation, baseline outputs, TADN outputs)  
-   → Includes:
-      - 01_input_thermal/
-      - 01_depth_outputs/
-      - 02_outputs_baseline/
-      - 03_outputs_tadn/
-      - notebooks for each stage of the pipeline
+### 1. Thermal_Depth_Sandbox/
+Main experimental pipeline, organised into three stages:
 
-2. evaluation/  
-   → Edge-based evaluation scripts and outputs  
-   → Includes:
-      - evaluation_outputs/
-      - edge_debug_evaluation/
-      - qualitative.ipynb
-      - table_3_1.csv
+- **Stage_1/**
+  → Thermal to depth conversion  
+  → Includes:
+  - `01_input_thermal/` (input thermal images)
+  - `01_depth_outputs/` (generated depth maps)
+  - `01_original RGB/` (reference RGB images)
+  - `01_thermal_to_depth_restart.ipynb`
 
-3. figures/  
-   → Figures used in the dissertation
+- **Stage_2/**
+  → Baseline RGB reconstruction (no TADN)
+  - `02_outputs_baseline/`
+  - `02_controlnet_depth_baseline.ipynb`
 
-4. OLD_* folders  
-   → Previous experimental attempts (not used in final evaluation, retained for completeness)
+- **Stage_3/**
+  → TADN-enhanced RGB reconstruction
+  - `03_outputs_tadn/`
+  - `03_tadn_rgb_generated_outputs/`
+  - `03_controlnet_depth_TADN.ipynb`
 
-5. README.md  
-   → Project overview and instructions
+- **Previous_attempt/**
+  → Earlier experimental iterations retained for completeness
 
-6. requirements.txt  
-   → Python dependencies required to run the project
+---
+
+### 2. evaluation/
+→ Quantitative and qualitative evaluation
+
+- `evaluation_outputs/`
+- `edge_debug_evaluation/`
+- `qualitative.ipynb`
+- `final_table.csv`
+
+---
+
+### 3. figures/
+→ Figures used in the dissertation
+
+---
+
+### 4. requirements.txt
+→ Python dependencies required to run the project
+
+---
+
+### 5. README.md
+→ Project overview and instructions
+
+## Notes
+- This project uses pretrained Stable Diffusion and ControlNet models.
+- GPU acceleration is recommended for faster inference.
+- Some folders (e.g., Previous_attempt) are retained to show development progression.
 
 ## Method Summary
 

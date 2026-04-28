@@ -80,17 +80,12 @@ Evaluation outputs include edge-based precision, recall, and F1 scores used in t
 
 ---
 
-### 3. figures/
-→ Figures used in the dissertation
-
----
-
-### 4. requirements.txt
+### 3. requirements.txt
 → Python dependencies required to run the project
 
 ---
 
-### 5. README.md
+### 4. README.md
 → Project overview and instructions
 
 ---

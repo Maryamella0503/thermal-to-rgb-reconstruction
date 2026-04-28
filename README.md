@@ -52,18 +52,18 @@ Main experimental pipeline, organised into three stages:
   - `01_input_thermal/` (input thermal images)
   - `01_depth_outputs/` (generated depth maps)
   - `01_original RGB/` (reference RGB images)
-  - `01_thermal_to_depth_restart.ipynb`
+  - `01_thermal_to_depth_restart.ipynb` (Notebook implementing the thermal-to-depth conversion stage, generating depth maps from input thermal images using the ControlNet depth preprocessor)
 
 - **Stage_2/**
   → Baseline RGB reconstruction (no TADN)
-  - `02_outputs_baseline/`
-  - `02_controlnet_depth_baseline.ipynb`
+  - `02_outputs_baseline/` (RGB outputs generated using the baseline pipeline without any TADN refinement)
+  - `02_controlnet_depth_baseline.ipynb` (Notebook implementing the baseline depth-conditioned reconstruction pipeline)
 
 - **Stage_3/**
   → TADN-enhanced RGB reconstruction
-  - `03_outputs_tadn/`
-  - `03_tadn_rgb_generated_outputs/`
-  - `03_controlnet_depth_TADN.ipynb`
+  - `03_outputs_tadn/` (TADN-refined depth maps produced from the initial thermal-derived depth outputs)
+  - `03_tadn_rgb_generated_outputs/` (Final RGB outputs generated using the pipeline with TADN-refined depth conditioning)
+  - `03_controlnet_depth_TADN.ipynb` (Notebook implementing the TADN-enhanced reconstruction pipeline)
 
 - **Previous_attempt/**
   → Earlier experimental iterations retained for completeness

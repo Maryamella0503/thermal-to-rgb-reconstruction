@@ -129,5 +129,5 @@ Thermal images were sourced from the FLIR dataset, a publicly available collecti
 This repository is provided for academic assessment purposes. Generated RGB outputs are model-based reconstructions and should not be interpreted as ground-truth representations.
 
 ## Author
-Maryam Yasser Ellathy
-University of Leeds - School of Computing
+Maryam Yasser Ellathy,
+University of Leeds, School of Computing
